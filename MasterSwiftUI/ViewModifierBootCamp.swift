@@ -18,7 +18,8 @@ struct ViewModifierBootCamp: View {
         VStack {
             
             Slider(value: Binding(get: {
-                self.sliderValue
+                print("Get time is happening")
+                return self.sliderValue
             }, set: { newVal in
                 self.sliderValue = newVal
                 print("Do something while changing value with slider : \(newVal)")
