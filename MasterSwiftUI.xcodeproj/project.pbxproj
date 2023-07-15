@@ -12,6 +12,8 @@
 		D940F4D72A5D7BA600B42794 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D940F4D62A5D7BA600B42794 /* Assets.xcassets */; };
 		D940F4DA2A5D7BA600B42794 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D940F4D92A5D7BA600B42794 /* Preview Assets.xcassets */; };
 		D940F4E22A5DA20F00B42794 /* DefaultButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D940F4E12A5DA20F00B42794 /* DefaultButtonViewModifier.swift */; };
+		D9A347492A6143D000006284 /* ButtonStyleBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A347482A6143D000006284 /* ButtonStyleBootcamp.swift */; };
+		D9A3474F2A62D30400006284 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3474E2A62D30400006284 /* ButtonStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		D940F4D62A5D7BA600B42794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D940F4D92A5D7BA600B42794 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D940F4E12A5DA20F00B42794 /* DefaultButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonViewModifier.swift; sourceTree = "<group>"; };
+		D9A347482A6143D000006284 /* ButtonStyleBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleBootcamp.swift; sourceTree = "<group>"; };
+		D9A3474E2A62D30400006284 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			children = (
 				D940F4D22A5D7BA500B42794 /* MasterSwiftUIApp.swift */,
 				D940F4D42A5D7BA500B42794 /* ViewModifierBootCamp.swift */,
+				D9A347482A6143D000006284 /* ButtonStyleBootcamp.swift */,
 				D940F4E02A5DA1C200B42794 /* CustomModifiers */,
+				D9A3474D2A62D2F400006284 /* Styles */,
 				D940F4D62A5D7BA600B42794 /* Assets.xcassets */,
 				D940F4D82A5D7BA600B42794 /* Preview Content */,
 			);
@@ -78,6 +84,14 @@
 			path = CustomModifiers;
 			sourceTree = "<group>";
 		};
+		D9A3474D2A62D2F400006284 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				D9A3474E2A62D30400006284 /* ButtonStyles.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +108,8 @@
 			dependencies = (
 			);
 			name = MasterSwiftUI;
+			packageProductDependencies = (
+			);
 			productName = MasterSwiftUI;
 			productReference = D940F4CF2A5D7BA500B42794 /* MasterSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +138,8 @@
 				Base,
 			);
 			mainGroup = D940F4C62A5D7BA500B42794;
+			packageReferences = (
+			);
 			productRefGroup = D940F4D02A5D7BA500B42794 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -150,6 +168,8 @@
 			files = (
 				D940F4D52A5D7BA500B42794 /* ViewModifierBootCamp.swift in Sources */,
 				D940F4E22A5DA20F00B42794 /* DefaultButtonViewModifier.swift in Sources */,
+				D9A347492A6143D000006284 /* ButtonStyleBootcamp.swift in Sources */,
+				D9A3474F2A62D30400006284 /* ButtonStyles.swift in Sources */,
 				D940F4D32A5D7BA500B42794 /* MasterSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,7 @@ struct ViewModifierBootCamp: View {
         VStack {
             
             Slider(value: Binding(get: {
-                print("Get time is happening")
+                
                 return self.sliderValue
             }, set: { newVal in
                 self.sliderValue = newVal
@@ -35,6 +35,20 @@ struct ViewModifierBootCamp: View {
             Text("Hello, world!")
                 .withDefaultButtonViewModifier(color: colors[Int(sliderValue)])
             
+            
+            Button{
+                
+            }label: {
+                Text("Click me!")
+                    .font(.headline)
+                    .foregroundColor(Color.white)
+                    .frame(height: 55)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.orange)
+                    .cornerRadius(10)
+                    .shadow(color: Color.orange.opacity(0.3), radius: 10, x: 0, y: 10)
+                    
+            }
         }
         .padding()
     }
