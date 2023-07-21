@@ -11,7 +11,7 @@ import SwiftUI
 struct MasterSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ViewModifierBootCamp()
+            AnyTransitionBootcamp()
         }
     }
 }

@@ -14,6 +14,8 @@
 		D940F4E22A5DA20F00B42794 /* DefaultButtonViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D940F4E12A5DA20F00B42794 /* DefaultButtonViewModifier.swift */; };
 		D9A347492A6143D000006284 /* ButtonStyleBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A347482A6143D000006284 /* ButtonStyleBootcamp.swift */; };
 		D9A3474F2A62D30400006284 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3474E2A62D30400006284 /* ButtonStyles.swift */; };
+		D9C5C5B82A67DABA00A081ED /* SunFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C5C5B72A67DABA00A081ED /* SunFlower.swift */; };
+		D9CDEA0E2A6312E20041535D /* AnyTransitionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CDEA0D2A6312E20041535D /* AnyTransitionBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		D940F4E12A5DA20F00B42794 /* DefaultButtonViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButtonViewModifier.swift; sourceTree = "<group>"; };
 		D9A347482A6143D000006284 /* ButtonStyleBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleBootcamp.swift; sourceTree = "<group>"; };
 		D9A3474E2A62D30400006284 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		D9C5C5B72A67DABA00A081ED /* SunFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunFlower.swift; sourceTree = "<group>"; };
+		D9CDEA0D2A6312E20041535D /* AnyTransitionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +64,12 @@
 				D940F4D22A5D7BA500B42794 /* MasterSwiftUIApp.swift */,
 				D940F4D42A5D7BA500B42794 /* ViewModifierBootCamp.swift */,
 				D9A347482A6143D000006284 /* ButtonStyleBootcamp.swift */,
+				D9CDEA0D2A6312E20041535D /* AnyTransitionBootcamp.swift */,
 				D940F4E02A5DA1C200B42794 /* CustomModifiers */,
 				D9A3474D2A62D2F400006284 /* Styles */,
 				D940F4D62A5D7BA600B42794 /* Assets.xcassets */,
 				D940F4D82A5D7BA600B42794 /* Preview Content */,
+				D9C5C5B72A67DABA00A081ED /* SunFlower.swift */,
 			);
 			path = MasterSwiftUI;
 			sourceTree = "<group>";
@@ -168,6 +174,8 @@
 			files = (
 				D940F4D52A5D7BA500B42794 /* ViewModifierBootCamp.swift in Sources */,
 				D940F4E22A5DA20F00B42794 /* DefaultButtonViewModifier.swift in Sources */,
+				D9CDEA0E2A6312E20041535D /* AnyTransitionBootcamp.swift in Sources */,
+				D9C5C5B82A67DABA00A081ED /* SunFlower.swift in Sources */,
 				D9A347492A6143D000006284 /* ButtonStyleBootcamp.swift in Sources */,
 				D9A3474F2A62D30400006284 /* ButtonStyles.swift in Sources */,
 				D940F4D32A5D7BA500B42794 /* MasterSwiftUIApp.swift in Sources */,
