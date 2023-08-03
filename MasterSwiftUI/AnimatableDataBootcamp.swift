@@ -8,7 +8,6 @@
 import SwiftUI
 //✅ 😂
 
-
 struct AnimatableDataBootcamp: View {
     @State var animate:Bool = false
     var body: some View {
@@ -69,7 +68,7 @@ struct PacMan:Shape{
             path.addArc(center: CGPoint(x: rect.midX, y: rect.minY),
                         radius: rect.height / 2 ,
                         startAngle: Angle(degrees: 0),
-                        endAngle: Angle(degrees: 360 - offsetAmount§ ),
+                        endAngle: Angle(degrees: 360 - offsetAmount ),
                         clockwise: false)
         }
     }
