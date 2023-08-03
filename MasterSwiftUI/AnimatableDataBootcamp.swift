@@ -67,7 +67,7 @@ struct PacMan:Shape{
             path.move(to: CGPoint(x: rect.midX, y: rect.minY))
             path.addArc(center: CGPoint(x: rect.midX, y: rect.minY),
                         radius: rect.height / 2 ,
-                        startAngle: Angle(degrees: 0),
+                        startAngle: Angle(degrees: offsetAmount),
                         endAngle: Angle(degrees: 360 - offsetAmount ),
                         clockwise: false)
         }
