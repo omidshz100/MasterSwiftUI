@@ -20,7 +20,7 @@ struct AnimatableDataBootcamp: View {
                     .frame(width: 200, height: 200)
             }
             .onAppear(){
-                    withAnimation(Animation.linear(duration: 1.2).repeatForever()){
+                    withAnimation(Animation.easeInOut (duration: 1.2).repeatForever()){
                         animate.toggle()
                     }
                 }
