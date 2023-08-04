@@ -67,3 +67,10 @@ struct SunflowerPainter: View {
         }
     }
 }
+
+
+struct SunflowerView_Previews: PreviewProvider {
+    static var previews: some View {
+        SunflowerView()
+    }
+}
