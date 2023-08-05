@@ -19,6 +19,7 @@
 		D9A3474F2A62D30400006284 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A3474E2A62D30400006284 /* ButtonStyles.swift */; };
 		D9A9772E2A710F91001C639D /* CustomShapesBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A9772D2A710F91001C639D /* CustomShapesBootcamp.swift */; };
 		D9C5C5B82A67DABA00A081ED /* SunFlower.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C5C5B72A67DABA00A081ED /* SunFlower.swift */; };
+		D9CA03082A7DAE60002FE0EE /* ViewBuilderBootCamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA03072A7DAE60002FE0EE /* ViewBuilderBootCamp.swift */; };
 		D9CDEA0E2A6312E20041535D /* AnyTransitionBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CDEA0D2A6312E20041535D /* AnyTransitionBootcamp.swift */; };
 		D9DB0D2A2A6E8305008C8407 /* MatchedGeometryEffectBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DB0D292A6E8305008C8407 /* MatchedGeometryEffectBootcamp.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		D9A3474E2A62D30400006284 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		D9A9772D2A710F91001C639D /* CustomShapesBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShapesBootcamp.swift; sourceTree = "<group>"; };
 		D9C5C5B72A67DABA00A081ED /* SunFlower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunFlower.swift; sourceTree = "<group>"; };
+		D9CA03072A7DAE60002FE0EE /* ViewBuilderBootCamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderBootCamp.swift; sourceTree = "<group>"; };
 		D9CDEA0D2A6312E20041535D /* AnyTransitionBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTransitionBootcamp.swift; sourceTree = "<group>"; };
 		D9DB0D292A6E8305008C8407 /* MatchedGeometryEffectBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchedGeometryEffectBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 				D9811D062A73A53F00BC00B2 /* CustomCurvedBootcamp.swift */,
 				D9811D082A73DBEA00BC00B2 /* AnimatableDataBootcamp.swift */,
 				D96C09ED2A7C1EDA00875D5A /* GenericBootCamp.swift */,
+				D9CA03072A7DAE60002FE0EE /* ViewBuilderBootCamp.swift */,
 				D940F4E02A5DA1C200B42794 /* CustomModifiers */,
 				D9A3474D2A62D2F400006284 /* Styles */,
 				D940F4D62A5D7BA600B42794 /* Assets.xcassets */,
@@ -193,6 +196,7 @@
 				D9DB0D2A2A6E8305008C8407 /* MatchedGeometryEffectBootcamp.swift in Sources */,
 				D9CDEA0E2A6312E20041535D /* AnyTransitionBootcamp.swift in Sources */,
 				D9C5C5B82A67DABA00A081ED /* SunFlower.swift in Sources */,
+				D9CA03082A7DAE60002FE0EE /* ViewBuilderBootCamp.swift in Sources */,
 				D96C09EE2A7C1EDA00875D5A /* GenericBootCamp.swift in Sources */,
 				D9811D072A73A53F00BC00B2 /* CustomCurvedBootcamp.swift in Sources */,
 				D9A347492A6143D000006284 /* ButtonStyleBootcamp.swift in Sources */,
