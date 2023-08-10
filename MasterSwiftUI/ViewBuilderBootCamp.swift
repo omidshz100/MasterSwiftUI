@@ -67,6 +67,7 @@ struct CustomHStack<Content:View>:View{
     }
 }
 
+// Also you can Use @ViewBuilder for functions that return View
 @ViewBuilder
 func SomeView()-> some View {
     Text("sdjkhfb")
@@ -120,7 +121,11 @@ struct LocalViewBuilder:View{
         }
     }
     private var viewOne: some View {
-        Text("View One")
+        VStack{
+            Image(systemName: "square.and.arrow.up.on.square")
+                .foregroundColor(Color.yellow)
+            Text("Home")
+        }
     }
     private var viewTwo: some View {
         VStack{
