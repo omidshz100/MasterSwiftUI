@@ -14,11 +14,17 @@ extension View {
         self.background(
             GeometryReader { geo in
                 Text("")
-                    .preference(key: ScrollViewOffsetPreferenceKey.self, value: geo.frame(in: .global).minY)
+                    //.preference(key: ScrollViewOffsetPreferenceKey.self, value: geo.frame(in: .global).minY)
+                    .scrollViewValue(geo.frame(in: .global).minY)
             }.onPreferenceChange(ScrollViewOffsetPreferenceKey.self) { value in
                 action(value)
             }
         )
+    }
+}
+extension View {
+    func scrollViewValue(_ v:CGFloat) -> some View{
+        preference(key: ScrollViewOffsetPreferenceKey.self, value: v)
     }
 }
 struct ScrollViewOffsetPreferenceKeyBootcamp: View {
