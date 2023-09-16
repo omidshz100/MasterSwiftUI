@@ -34,6 +34,7 @@ struct ViewModifierBootCamp: View {
             
             Text("Hello, world!")
                 .withDefaultButtonViewModifier(color: colors[Int(sliderValue)])
+//                .modifier(DefaultButtonViewModifier(color: colors[Int(sliderValue)]))
             
             
             Button{

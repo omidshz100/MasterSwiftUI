@@ -13,9 +13,9 @@ struct RotateViewModifier:ViewModifier {
     func body(content: Content) -> some View {
         content
             .rotationEffect(Angle(degrees: rotation))
-            .offset(
-                x:  rotation != 0 ? UIScreen.main.bounds.width:0,
-                y:  rotation != 0 ? UIScreen.main.bounds.height:0)
+//            .offset(
+//                x:  rotation != 0 ? UIScreen.main.bounds.width:0,
+//                y:  rotation != 0 ? UIScreen.main.bounds.height:0)
     }
 }
 // ✅ Transiition
@@ -25,7 +25,7 @@ extension AnyTransition {
         // identity :‌معنی اینو میده که هویت اصلیش چی بوده
         // انگاری انیمیشن از مقدار مقصد به مقدار واقعی خودش بر میگرده
         return AnyTransition.modifier(
-            active: RotateViewModifier(rotation: 1080),
+            active: RotateViewModifier(rotation: 180 + 30),
             identity: RotateViewModifier(rotation: 0))
     }
     // ✅ Transiition
@@ -68,7 +68,7 @@ struct AnyTransitionBootcamp: View {
                 .padding(.horizontal, 25)
                 .onTapGesture {
                     // ✅ Transiition
-                    withAnimation(.easeInOut(duration: 0.5) ){
+                    withAnimation(.easeInOut(duration: 4.5) ){
                         isShowingRectangle.toggle()
                     }
                 }
