@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomTabBarContainerView<Content>: View where Content : View {
     let content:Content
     @Binding var selectionTab:TabBarItem
-    @State var tabs:[TabBarItem] = [.favorite, .home, .profile]
+    @State var tabs:[TabBarItem] = []
     
     
     

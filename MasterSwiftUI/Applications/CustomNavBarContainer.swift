@@ -7,12 +7,29 @@
 
 import SwiftUI
 
-struct CustomNavBarContainer: View {
+struct CustomNavBarContainer<Content>: View where Content:View {
+    
+    let content:Content
+    
+    init(@ViewBuilder content: () -> Content) {
+        self.content = content()
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing:0){
+            CustomNavBarView()
+            content
+                .frame(width: .infinity, height: .infinity)
+        }
+        
     }
 }
 
 #Preview {
-    CustomNavBarContainer()
+    CustomNavBarContainer(){
+        ZStack{
+            Color.yellow.ignoresSafeArea()
+            Text("Hello world")
+                .foregroundColor(.blue)
+        }
+    }
 }

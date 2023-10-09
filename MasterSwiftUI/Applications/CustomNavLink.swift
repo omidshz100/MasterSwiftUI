@@ -7,12 +7,32 @@
 
 import SwiftUI
 
-struct CustomNavLink: View {
+struct CustomNavLink<Label:View, Destination:View> : View {
+    
+    let destination: Destination
+    let label:Label
+    
+    init(destination: Destination, @ViewBuilder label: ()->Label ) {
+        self.destination = destination
+        self.label = label()
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationLink {
+                destination
+        } label: {
+            label
+        }
+
     }
 }
 
 #Preview {
-    CustomNavLink()
+    CustomNavView {
+        ZStack{
+            Color.white
+            CustomNavLink(destination: Text("Destination ... ")) {
+                Text("The label of link")
+            }
+        }
+    }
 }

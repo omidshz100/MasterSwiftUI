@@ -9,10 +9,41 @@ import SwiftUI
 
 struct AppNavbarView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        CustomNavView {
+            ZStack{
+                Color.green.ignoresSafeArea()
+                
+                NavigationLink(destination:
+                                Text("Destination View")
+                    .navigationTitle("Destination View TITLE")
+                    .navigationBarBackButtonHidden(false)
+                ) {
+                    Text("Click me to see! ...")
+                }
+            }
+        }
     }
 }
 
+
+extension AppNavbarView{
+    private var defaultNavView: some View {
+        NavigationView{
+            ZStack{
+                Color.green
+                
+                NavigationLink(destination:
+                                Text("Destination View")
+                    .navigationTitle("Destination View TITLE")
+                    .navigationBarBackButtonHidden(false)
+                ) {
+                    Text("Click me to see! ...")
+                }
+            }.ignoresSafeArea()
+                .navigationTitle("Hello First Page")
+        }
+    }
+}
 #Preview {
     AppNavbarView()
 }

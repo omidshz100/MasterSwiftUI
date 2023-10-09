@@ -7,12 +7,25 @@
 
 import SwiftUI
 
-struct CustomNavView: View {
+struct CustomNavView<Content:View> : View {
+    
+    let content:Content
+    
+    init(@ViewBuilder content: () -> Content ) {
+        self.content = content()
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            CustomNavBarContainer {
+                content
+            }
+            .navigationBarHidden(true)
+        }.navigationViewStyle(.stack)
     }
 }
 
 #Preview {
-    CustomNavView()
+    CustomNavView(){
+        Color.green.ignoresSafeArea()
+    }
 }
