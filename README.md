@@ -1,3 +1,3 @@
 # MasterSwiftUI
 
-این جا در این پروژه سعی دارم که قدم به قدم تجربیات مفیدی را در مورد توسعه swiftUI به اشتراک بگذارم. نحوه کار به این شکل میباشد که هر commit برابر با یک تجربه که بطور کامل توضیح خواهم داد که سناریو از چه قراره. با من همراه باشید  
+Here in this project, I try to share useful experiences about **swiftUI** development step by step. The way it works is that each commit is equal to an experience, which I will fully explain what the scenario is about. stay with me
