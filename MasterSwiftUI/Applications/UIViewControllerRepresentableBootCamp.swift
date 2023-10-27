@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import Photos
 
 
 struct UIViewControllerRepresentableBootCamp: View {
@@ -36,6 +37,7 @@ struct UIViewControllerRepresentableBootCamp: View {
             }
             
             Button {
+                checkPhotoLibraryPermission()
                 isShowingPickerImage.toggle()
             } label: {
                 Text("Click to pick image")
@@ -46,18 +48,38 @@ struct UIViewControllerRepresentableBootCamp: View {
             UIBasicViewControllerRepresentable(titleTxt: $userText)
         })
         .sheet(isPresented: $isShowingPickerImage, content: {
-            UIImagePickerContrillerRepresenter(pickedImage: $image)
+            UIImagePickerContrillerRepresenter(pickedImage: $image, isShowingPickerImage: $isShowingPickerImage)
         })
+    }
+    func checkPhotoLibraryPermission() {
+        let status = PHPhotoLibrary.authorizationStatus()
+        switch status {
+        case .authorized:
+            // Permission already granted
+            print("Permission already granted")
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization { status in
+                if status == .authorized {
+                    // Permission granted
+                    print("Permission already granted  - 2 -")
+                }
+            }
+        default:
+            // Handle other cases (e.g., denied or restricted)
+            print("Handle other cases (e.g., denied or restricted)")
+        }
     }
 }
 
 struct UIImagePickerContrillerRepresenter:UIViewControllerRepresentable {
     
     @Binding var pickedImage:UIImage?
+    @Binding var isShowingPickerImage:Bool
     
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let pickeImageViewController = UIImagePickerController()
-        
+        pickeImageViewController.allowsEditing = false
+        pickeImageViewController.delegate = context.coordinator
         return pickeImageViewController
     }
     
@@ -65,22 +87,23 @@ struct UIImagePickerContrillerRepresenter:UIViewControllerRepresentable {
         
     }
     func makeCoordinator() -> Coordinator {
-        return Coordinator(pickedImage: $pickedImage)
+        return Coordinator(image:  $pickedImage, showScreen: $isShowingPickerImage)
     }
     
     class Coordinator: NSObject ,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         
-        @Binding var pickedImage:UIImage
+        @Binding var image:UIImage?
+        @Binding var isShowingPickerImage:Bool
         
-        init(pickedImage: Binding<UIImage>) {
-            self._pickedImage = pickedImage
+        init(image: Binding<UIImage?>, showScreen:Binding<Bool>) {
+            self._image = image
+            self._isShowingPickerImage = showScreen
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            
             guard let newImage = info[.originalImage] as? UIImage else {return}
-            
-            self.pickedImage = newImage
+            self.image = newImage
+            self.isShowingPickerImage = false
         }
         
     }
@@ -90,16 +113,17 @@ struct UIBasicViewControllerRepresentable:UIViewControllerRepresentable {
     @Binding var titleTxt:String
     
     
-    func updateUIViewController(_ uiViewController: ViewController, context: Context) {
-        
-        uiViewController.titleText.text = self.titleTxt
-    }
     func makeUIViewController(context: Context) -> ViewController {
         let vc = ViewController()
         vc.view.backgroundColor = .red
         
         return vc
     }
+    
+    func updateUIViewController(_ uiViewController: ViewController, context: Context) {
+        uiViewController.titleText.text = self.titleTxt
+    }
+    
 }
 #Preview {
     UIViewControllerRepresentableBootCamp()
