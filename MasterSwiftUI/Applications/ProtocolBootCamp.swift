@@ -6,10 +6,20 @@
 //
 
 import SwiftUI
+// here we are going to use Protocols in our development
+protocol TextProtocol{
+    var text:String { get }
+}
+class TextDataSource: TextProtocol {
+    var text: String = "Hello world"
+}
+class TextDatasourceCustom: TextProtocol {
+    var text: String = "Hello world"
+}
 
 struct ProtocolBootCamp: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(TextDataSource().text)
     }
 }
 
